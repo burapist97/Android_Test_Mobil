@@ -1,0 +1,19 @@
+Bu uygulama, Token Finansal Teknolojiler adına Mahmut Burak Ceylan tarafından geliştirilmiştir.
+
+📌 Uygulama Hakkında
+Android cihazlarda tekrar eden test senaryolarını otomatize etmek için tasarlanmıştır. Manuel olarak yapılan test adımlarını kaydederek öğrenir ve daha sonra bu adımları birebir tekrarlar. Gerçekleşen adımlar ile beklenen sonuç ekranlarını karşılaştırır; bir hata veya uyumsuzluk tespit etmesi halinde anında ekran görüntüsü (screenshot) ve sistem loglarını alarak detaylı bir rapor sunar.
+
+⚠️ Önemli Hatırlatmalar
+
+Uygulama otonom çalışmasına rağmen, beklenmedik sistem bildirimleri veya ekran gecikmeleri nedeniyle hata yapabilir. Testi yürüten kişinin akışı gözlemlemesi tavsiye edilir.
+
+Test edilen uygulamaya yeni bir arayüz güncellemesi geldiğinde eski adımlar geçersiz kalabilir. Bu durumlarda yeni test senaryolarının akışa tekrar öğretilmesi (kaydedilmesi) beklenmektedir.
+
+💡 Geliştirme Süreci ve Haklar
+Tüm kodlama süreci ve uygulamanın geliştirilme aşamaları yapay zeka desteği ile gerçekleştirilmiştir. Uygulamanın tüm fikir ve kullanım hakları saklıdır.
+
+📞 İletişim ve Güncellemeler
+Geliştirme talepleri, teknik destek veya karşılaştığınız sorunlar için lütfen Mahmut Burak Ceylan ile iletişime geçiniz.
+
+Uygulamanın güncel versiyonlarını ve hata düzeltmelerini (bugfix) aşağıdaki bağlantıdan takip edebilirsiniz:
+🔗 https://github.com/burapist97/more_automation
