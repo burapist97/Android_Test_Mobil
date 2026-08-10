@@ -1,0 +1,37 @@
+name: Windows Kurulum Paketi Olustur
+
+on:
+  push:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Kodları Çek
+        uses: actions/checkout@v3
+
+      - name: Python Kurulumu
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Gerekli Kütüphaneleri Yükle
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyinstaller customtkinter pynput pillow
+
+      - name: PyInstaller ile Uygulamayı Derle
+        run: |
+          pyinstaller --noconsole --onedir --add-data "test_merkezi.db;." --add-data "check.xml;." --add-data "view.xml;." --add-data "platform-tools;platform-tools" arayuz.py
+
+      - name: Inno Setup ile Kurulum (.exe) Paketi Hazırla
+        run: |
+          iscc kurulum.iss
+
+      - name: Hazırlanan Setup Dosyasını İndirilebilir Yap
+        uses: actions/upload-artifact@v3
+        with:
+          name: Otomasyon_Kurulum
+          path: Output/Otomasyon_Kurulum.exe
