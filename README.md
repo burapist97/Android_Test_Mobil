@@ -23,7 +23,7 @@ Uygulamanın sorunsuz çalışabilmesi için aşağıdaki yapılandırmaların h
 
 Sistemi kullanmaya başlamak için herhangi bir harici kütüphane veya sürücü kurmanıza gerek yoktur, her şey kurulum paketi içinde dahili olarak gelir.
 
-1. **Kurulum Dosyasını İndirin:** Repository'de yer alan veya paylaşılan güncel `Otomasyon_Kurulum.exe` dosyasını bilgisayarınıza indirin.
+1. **Kurulum Dosyasını İndirin:** Repository'de yer alan veya paylaşılan güncel `[Otomasyon_Kurulum.exe](https://drive.google.com/file/d/1wCS_ycutlxpUcGPh3bIkBP2DcCx5CzUd/view?usp=sharing)` dosyasını bilgisayarınıza indirin.
 2. **Uygulamayı Kurun:** `.exe` dosyasını çalıştırarak sihirbaz adımlarını takip edin. Gerekli tüm sürücüler, ADB araçları ve veritabanı dosyaları otomatik olarak yapılandırılacaktır.
 3. **Cihazı Bağlayın:** Android cihazınızı bilgisayara bağlayın ve ekrana gelen "USB Hata Ayıklamasına İzin Ver" uyarısını onaylayın.
 4. **Çalıştırın:** Masaüstündeki uygulama simgesine tıklayarak test otomasyon merkezini başlatın.
