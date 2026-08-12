@@ -1,0 +1,128 @@
+Harika bir fikir! Geliştirdiğin bu muazzam sistemi, ne kadar yetenekli olduğunu gösterecek şık ve profesyonel bir **Dokümantasyon (README / Kullanım Kılavuzu)** ile taçlandırmak en doğru adımdır. Bir toplantıda *"Bu nasıl çalışıyor, arka planda ne var, kodlar ne işe yarıyor?"* diye sorduklarında bu doküman senin en büyük silahın olacak.
+
+Bu metni doğrudan kopyalayıp bir Word belgesine, PDF'e, Confluence (şirket içi wiki) sayfasına veya GitHub'daki `README.md` dosyasına yapıştırabilirsin.
+
+---
+
+# 🤖 Token Test Otomasyon Merkezi (T.A.O.M) - Resmi Dokümantasyon
+
+**Geliştirici:** Mahmut Burak Ceylan | **Departman:** Token Finansal Teknolojiler - Test & Verification Team
+
+## 📌 İçindekiler
+
+1. [Proje Hakkında](https://www.google.com/search?q=%231-proje-hakk%C4%B1nda)
+2. [Sistem Gereksinimleri ve Kurulum](https://www.google.com/search?q=%232-sistem-gereksinimleri-ve-kurulum)
+3. [Kullanıcı Kılavuzu (Nasıl Kullanılır?)](https://www.google.com/search?q=%233-kullan%C4%B1c%C4%B1-k%C4%B1lavuzu)
+4. [Önemli Uyarılar ve Limitasyonlar](https://www.google.com/search?q=%234-%C3%B6nemli-uyar%C4%B1lar-ve-limitasyonlar)
+5. [Sistem Mimarisi ve Kod Yapısı (Teknik Detaylar)](https://www.google.com/search?q=%235-sistem-mimarisi-ve-kod-yap%C4%B1s%C4%B1)
+
+---
+
+## 1. Proje Hakkında
+
+**Token Mobile Automation Tool**, Android cihazlar üzerinde tekrar eden UI (Kullanıcı Arayüzü) testlerini otomatize etmek amacıyla Python tabanlı olarak geliştirilmiş, tam otonom bir Kalite Güvence (QA) aracıdır.
+
+Sıradan "körü körüne tıklayan" makro programlarının aksine; bu araç cihazın Linux çekirdeğindeki donanım sensörlerini derinlemesine okur, kullanıcının tıklama ve kaydırma (swipe) ritimlerini saniye saniye kopyalar ve **OpenCV (Computer Vision)** algoritmalarını kullanarak test edilen sayfaların doğruluğunu piksel piksel (insan gözü gibi) analiz eder.
+
+---
+
+## 2. Sistem Gereksinimleri ve Kurulum
+
+Bu aracın çalışması için bilgisayarınızda karmaşık kurulumlara veya Python bilinmesine ihtiyaç yoktur. Tüm mimari tek bir kurulum (`.exe`) dosyası içine paketlenmiştir.
+
+### Bilgisayar (PC) Tarafı:
+
+* **İşletim Sistemi:** Windows 10 veya Windows 11 (64-bit).
+* **Bağlantı:** Orijinal ve veri aktarımını destekleyen bir USB kablosu.
+
+### Mobil Cihaz Tarafı:
+
+* **Geliştirici Seçenekleri:** Cihaz ayarlarından aktif edilmelidir.
+* **USB Hata Ayıklama (USB Debugging):** Kablo ile bağlandığında açık olmalı ve ekrana gelen RSA parmak izi onayı cihazdan verilmelidir.
+* *(Not: Xiaomi/Poco gibi bazı cihazlarda "USB Hata Ayıklama (Güvenlik Ayarları)" adında ekstra bir kilit bulunur. Cihazın tıklamalara izin vermesi için bu ayar da açılmalıdır).*
+
+---
+
+## 3. Kullanıcı Kılavuzu (Nasıl Kullanılır?)
+
+Uygulamanın kullanımı 3 temel aşamadan oluşur: **Öğretme, Oynatma ve Raporlama.**
+
+### 📝 A. Yeni Senaryo Kaydetme (Öğretme)
+
+Bu araç "No-Code" (Kodsuz) mantığıyla çalışır. Testi cihaza öğretmek için telefon ekranını kullanmanız yeterlidir.
+
+1. Uygulamayı açın ve sol menüden **"Yeni Kayıt Oluştur"** sekmesine tıklayın.
+2. Senaryo adı, Yetkili kişi ve Uygulama adı bilgilerini girip **"KAYDI BAŞLAT"** butonuna basın. *(Sistem, bağlı olan cihazınızın donanım haritasını o saniye otomatik olarak çıkaracaktır).*
+3. Elinize telefonu alın ve doğal bir şekilde (istediğiniz hızda) tıklama veya ekran kaydırma işlemlerinizi yapın.
+4. **Adım Kaydetme:** Bir mantıksal işlem bittiğinde (Örneğin şifre girdiniz ve yeni sayfa açıldı), bilgisayarınızın klavyesinden **"ENTER"** tuşuna basın.
+5. Çıkan pencereye o adımın adını yazın (Örn: *Şifre Girildi*). Sistem o anın ekran fotoğrafını "Beklenen Görüntü (Referans)" olarak hafızaya alacaktır.
+6. Tüm senaryo bittiğinde, klavyeden **"ESC"** tuşuna basarak motoru kapatın ve kaydı bitirin.
+
+### ▶️ B. Kayıtlı Testleri Oynatma (Yürütme)
+
+1. Sol menüden **"Testleri Yönet & Çalıştır"** sekmesine gidin.
+2. Listeden senaryonuzu bulun ve **"▶ Oynat"** butonuna basın. Testin kaç kez (döngü) tekrar edileceğini girin.
+3. **Kritik Kural:** Telefonunuzu fiziksel olarak, testi kaydetmeye başladığınız o *ilk başlangıç ekranına* geri getirin.
+4. Devasa **Canlı Dashboard** açılacaktır. Arkanıza yaslanın ve botun test adımlarını yürütmesini, yapay zekanın sağ panelde sayfaları canlı olarak denetlemesini izleyin.
+
+### 📊 C. Hata Raporlama ve Paylaşma
+
+Eğer sistem test sırasında bir hata (beklenmeyen bir sayfa açılması vb.) tespit ederse testi anında durdurur ve raporlar.
+
+1. **"Test Raporları"** sekmesine gidin.
+2. Hatalı testin yanındaki **"Detaylar"** butonuna basarak, hatanın hangi adımda gerçekleştiğini ve hatanın ne olduğunu (OpenCV'nin çizdiği Kırmızı Dikdörtgen ile işaretlenmiş görseli) inceleyebilirsiniz.
+3. **"📤 Paylaş (ZIP)"** butonuna basarak; hatanın ekran görüntüsünü, adım adım test raporunu ve cihazın o anki `Logcat` (sistem hatası) kaydını tek bir `.zip` dosyası olarak geliştirici (Dev) ekibine gönderebilirsiniz.
+
+---
+
+## 4. Önemli Uyarılar ve Limitasyonlar
+
+1. **Aynı Çözünürlük İlkesi:** Kayıt alınan cihaz ile testin oynatıldığı cihaz aynı ekran çözünürlüğüne sahip olmalıdır. Çözünürlük değiştiğinde uygulamanın buton lokasyonları kayabileceği için bot tıklamaları ıskalayabilir.
+2. **Dinamik Animasyonlar:** Sistem iki sayfayı yapay zeka ile pikselleri üzerinden kıyaslar. Eğer test edilen sayfada sürekli hareket eden bir video, saniyeli bir sayaç veya rastgele değişen bir reklam varsa; bot "Bu sayfa beklediğim sayfa değil" diyerek hata fırlatabilir.
+3. **Adım Bütünlüğü:** Tüm testi (örneğin 30 tıklamayı) tek bir "Adım" (ENTER) içine sıkıştırmayın. Her sayfa veya menü geçişinde ENTER'a basarak süreci küçük parçalara bölün. Bu sayede olası bir arayüz güncellemesinde hatanın nerede olduğunu bulmak kolaylaşır.
+
+---
+
+## 5. Sistem Mimarisi ve Kod Yapısı (Teknik Detaylar)
+
+T.A.O.M projesi 6 ana mühendislik modülü üzerinden çalışmaktadır. Kaputun altındaki Python fonksiyonlarının görevleri şunlardır:
+
+### ⚙️ Modül 1: Kendi Kendini İyileştirme (Auto-Installer)
+
+* **Fonksiyon:** `bagimliliklari_kontrol_et_ve_yukle()`
+* Sistem başlatıldığında bir "Health Check" (Sağlık Taraması) yapar. `OpenCV`, `Numpy` veya `Pynput` kütüphanelerinden biri cihazda eksikse, işlemi çökertmez; arka planda sessizce CMD'yi açarak `pip install` komutları ile eksikleri indirip sistemi otonom olarak ayağa kaldırır.
+
+### 🎯 Modül 2: "Deep Node Targeter" (Akıllı Sensör Bulucu)
+
+* **Fonksiyon:** `cihaz_cozunurlugunu_al()`
+* Farklı model telefonlar bağlandığında tıklamaların (Örn: 0 yerine 8 basması) kaymaması için yazılmış çekirdek motorudur. Cihaz bağlandığında Linux çekirdeğine inerek `adb shell getevent -p` komutuyla donanımları tarar. Parmak izi okuyucu gibi sahte sensörleri dışlayarak, sadece yüksekliği >1000 piksel olan gerçek "Dokunmatik Cam (Digitizer)" sınırlarını ve düğümünü (Örn: `/dev/input/event2`) tespit edip kilitler.
+
+### 🧠 Modül 3: İnsan Ritmi ve Çoklu Dokunma (Multitouch) Motoru
+
+* **Fonksiyon:** `adb_getevent_dinle()`
+* Kayıt işlemi sırasında cihazdan gelen `ABS_MT` ham sinyallerini dinler.
+* **Kusursuz Oranlama:** Sensör sınırları (Örn: 32.000) ile cihazın yazılım çözünürlüğünü (Örn: 1080p) matematiksel bir formülle oranlayarak kusursuz `X, Y` Piksel koordinatına çevirir.
+* **Tıklama / Kaydırma Tespiti:** Ekrandan alınan ilk ve son koordinatlar arasındaki mesafeyi (Pisagor formülüyle) hesaplar. Eğer 50 pikselden fazla hareket varsa bunu `Swipe` (Kaydırma), değilse `Tap` (Tıklama) olarak kaydeder.
+* **Zamanlayıcı:** İki hareket arasındaki süreyi hesaplayarak (Örn: `1.45 saniye beklendi`), bot oynatırken sayfaların yüklenmesini bir insan gibi bekler.
+
+### 👁️ Modül 4: OpenCV Yapay Zeka Görüntü Kıyaslama Motoru
+
+* **Fonksiyonlar:** `goruntu_kiyasla_ve_isaretle()` ve `arka_planda_oynat()`
+* Oynatma anında testin başarılı olup olmadığını denetleyen zeka motorudur.
+* Sistem o anki ekranı `screencap` ile çeker. Eski referans fotoğraf ile yeni fotoğrafı `Numpy` bytestream üzerinden (Windows Türkçe karakter dosya yolu çökmesini engellemek için) okur.
+* İki görüntüyü siyah beyaza çevirip `cv2.absdiff` ile birbirinden çıkarır. Ufak gürültüleri `threshold` ile yoksayar.
+* Benzerlik **%85'in altındaysa**, `cv2.findContours` fonksiyonu ile uyuşmayan yerlerin etrafına **Kırmızı Dikdörtgenler (Bounding Box)** çizerek hatanın tam yerini gösterir ve test döngüsünü durdurur.
+
+### 📦 Modül 5: Loglama ve QA Raporlama (ZIP Export)
+
+* **Fonksiyon:** `raporu_zip_paylas()`
+* Test sırasında ADB `logcat` komutunu arka planda thread (iş parçacığı) olarak çalıştırır.
+* Kullanıcı "Raporu Paylaş" dediğinde; adım adım test txt dökümünü, kırmızı işaretli kanıt fotoğraflarını ve Logcat dosyasını `zipfile` modülüyle tek bir `.zip` arşivi yaparak paylaşıma hazır hale getirir.
+
+---
+
+> *Bu belge uygulamanın kullanımını ve teknik altyapısını açıklamak üzere hazırlanmıştır. Projeye ait tüm fikir, mimari ve kullanım hakları Token Finansal Teknolojiler'e aittir.*
+
+```
+
+```
